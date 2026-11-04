@@ -1,0 +1,13 @@
+{
+  "itemGroup.fourseas": "Example Mod Tab",
+  "block.fourseas.example_block": "Example Block",
+  "item.fourseas.example_item": "Example Item",
+
+  "fourseas.configuration.title": "FourSeas Configs",
+  "fourseas.configuration.section.fourseas.common.toml": "FourSeas Configs",
+  "fourseas.configuration.section.fourseas.common.toml.title": "FourSeas Configs",
+  "fourseas.configuration.items": "Item List",
+  "fourseas.configuration.logDirtBlock": "Log Dirt Block",
+  "fourseas.configuration.magicNumberIntroduction": "Magic Number Text",
+  "fourseas.configuration.magicNumber": "Magic Number"
+}

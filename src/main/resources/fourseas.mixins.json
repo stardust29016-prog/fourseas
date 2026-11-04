@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.fourseas.mod.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BiomeMixin",
+    "SnowLayerBlockMixin"
+  ],
+  "client": [
+    "BiomeClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

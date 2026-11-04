@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "fourseas:block/flower/dandelion_spring"
+  }
+}
