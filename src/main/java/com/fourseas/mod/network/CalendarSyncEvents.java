@@ -13,8 +13,6 @@ public class CalendarSyncEvents {
 
     /** 上次同步时的天数，-1 表示还没记过 */
     private static int lastSyncedDay = -1;
-
-    /** 每隔多少 tick 检查一次（20 tick = 1 秒，40 = 2 秒） */
     private static final int CHECK_INTERVAL = 20;
     private static int tickCounter = 0;
 
@@ -22,7 +20,7 @@ public class CalendarSyncEvents {
     public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getEntity() instanceof ServerPlayer player) {
             CalendarSync.sendToPlayer(player);
-            // 顺手记下当前天数，避免进服后又立刻因“换天”再狂发
+            // 记下当前天数，避免进服后又立刻因“换天”
             if (player.level() instanceof ServerLevel level) {
                 lastSyncedDay = CalendarUtil.getcurrentDay(level);
             }
