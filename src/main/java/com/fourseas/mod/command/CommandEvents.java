@@ -1,5 +1,6 @@
 package com.fourseas.mod.command;
 import com.fourseas.mod.FourSeas;
+import com.fourseas.mod.network.CalendarSync;
 import com.lunaclock.api.CalendarUtil;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -35,6 +36,7 @@ public class CommandEvents {
                             // 2. 获取主世界
                             ServerLevel level = context.getSource().getServer().overworld();
                             CalendarUtil.setDay(level,days);
+                            CalendarSync.sendToLevel(level);
                             context.getSource().sendSuccess(() ->
                                     Component.literal("§a[四季] 已将时间修改为第 " + days + " 天！"), true);
 
@@ -48,7 +50,7 @@ public class CommandEvents {
                     ServerLevel level = context.getSource().getServer().overworld();
                     int currentDay = CalendarUtil.getDayInSeason(level);
                     context.getSource().sendSuccess(() ->
-                                    Component.literal("§e[四季] 当前是第 " + currentDay + " 天。"),
+                                    Component.literal("§e[四季] 当前是本季第 " + currentDay + " 天。"),
                             false
                     );
                     return 1;

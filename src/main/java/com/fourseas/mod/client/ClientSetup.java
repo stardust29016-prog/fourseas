@@ -1,5 +1,5 @@
 package com.fourseas.mod.client;
-import com.fourseas.mod.FoliageColorSource;
+import com.fourseas.mod.client.FoliageColorSource;
 import com.fourseas.mod.FourSeas;
 import com.lunaclock.mod.CalendarSavedData;
 import net.minecraft.client.renderer.BiomeColors;
@@ -38,23 +38,5 @@ public class ClientSetup {
                 //野花葵落叶
                 Blocks.WILDFLOWERS);
 
-    }
-     @SubscribeEvent
-    public static void onPlayerChat(ServerChatEvent event) {
-        // 获取玩家发送的消息（纯文本）
-        String message = event.getMessage().getString();
-
-        // 判断是否包含“日期”两个字
-        if (message.contains("日期")) {
-            ServerPlayer player = event.getPlayer();
-
-            // 拿到日历数据
-            CalendarSavedData calendar = CalendarSavedData.get(player.level());
-
-            // 给玩家发消息
-            player.sendSystemMessage(
-                    Component.literal("§a今天是第 " + calendar.day + " 天")
-            );
-        }
     }
 }

@@ -56,9 +56,6 @@ public class CalendarSyncEvents {
         if (currentDay != lastSyncedDay) {
             lastSyncedDay = currentDay;
             CalendarSync.sendToLevel(level);
-            // 调试用，稳定后可删
-            System.out.println("[fourseas] 检测到换天，同步季节 day=" + currentDay
-                    + " season=" + CalendarUtil.getSeasonName(level));
         }
     }
 }

@@ -34,8 +34,6 @@ public record CalendarSyncPayload(int season) implements CustomPacketPayload {
     public static void handle(CalendarSyncPayload payload, IPayloadContext context) {
         context.enqueueWork(() -> {
             WorldDate.setClientSeason(payload.season());
-            // 调试用，确认能收到可以先留着，稳定后删掉
-            System.out.println("[fourseas] 客户端收到季节: " + payload.season());
         });
     }
 }

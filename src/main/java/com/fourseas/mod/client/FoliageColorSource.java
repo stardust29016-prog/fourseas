@@ -1,6 +1,5 @@
-package com.fourseas.mod;
+package com.fourseas.mod.client;
 
-import com.fourseas.mod.client.SeasonColors;
 import net.minecraft.client.color.block.BlockTintSource;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.core.BlockPos;
