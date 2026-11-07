@@ -6,7 +6,7 @@ import net.minecraft.world.level.Level;
 
 public class WorldDate {
 
-    /** 客户端缓存的季节：0春 1夏 2秋 3冬 */
+    // 客户端缓存的季节：0春 1夏 2秋 3冬
     private static int clientSeason = 0;
 
     public static void setClientSeason(int season) {
@@ -17,9 +17,9 @@ public class WorldDate {
         return clientSeason;
     }
 
-    /**
-     * 服务端：读日历
-     * 客户端：读同步过来的缓存
+    /*
+      服务端：读日历
+      客户端：读同步过来的缓存
      */
     public static long getSeason(Level level) {
         if (level instanceof ServerLevel serverLevel) {

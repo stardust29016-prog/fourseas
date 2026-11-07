@@ -37,7 +37,6 @@ public class FourSeas {
     public static final String MODID = "fourseas";
     public static final Logger LOGGER = LogUtils.getLogger();
     public FourSeas(IEventBus modEventBus, ModContainer modContainer) {
-// 放在主类构造方法里
         modEventBus.addListener(ModNetwork::register);
     }
 

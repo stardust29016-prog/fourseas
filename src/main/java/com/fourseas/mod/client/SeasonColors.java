@@ -74,7 +74,7 @@ public class SeasonColors {
                 default -> ARGB.opaque(0x619961);
             };
         }
-        //樱花书落叶
+        //樱花树落叶
         if (block == Blocks.PINK_PETALS) {
             return switch (check) {
                 case 3 -> ARGB.opaque(0xE8ECEF);

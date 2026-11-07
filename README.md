@@ -1,25 +1,24 @@
+# FourSeas 四季
 
-Installation information
-=======
+Minecraft26.1.2 NeoForge 四季模组：季节染色、天气、与日历联动。
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## 参考
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+本模组在实现思路上参考了 [Ecliptic Seasons](https://github.com/TeamTeaMC/Ecliptic-Seasons)（neoforge-26.1 分支），
+在此感谢原作者。本仓库代码为独立实现，并非该项目的分支或再分发。
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## 依赖
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+- NeoForge（对应游戏版本）
+- LunaClock（日历，必须安装）
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## 功能
+
+- 春夏秋冬草叶变色
+- 冬天雨变雪、非冬天加速化雪
+- 与 LunaClock 天数同步
+
+## 指令
+
+- `/setday <天数>` 设置日历天数
+- `/getday` 查看本季第几天
