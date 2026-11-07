@@ -14,6 +14,5 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 @EventBusSubscriber(modid = FourSeas.MODID, value = Dist.CLIENT)
 public class FourSeasClient {
     public FourSeasClient(ModContainer container) {
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 }
